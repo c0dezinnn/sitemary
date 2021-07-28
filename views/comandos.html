@@ -1,0 +1,54 @@
+<%- 
+//let cmds = "";
+-%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary - Comandos</title>
+    <style>
+      
+      body {
+        background-image: url('https://cdn.discordapp.com/attachments/769212253781229598/869584071238488134/v2cmfx8rbdv11.jpg')
+      }
+
+      p{
+        font-size: 15px;
+        font-family: 'Arial';
+        font-size: 15px;
+        color: white;
+        padding-left: 31%;
+        margin-left: 5%; 
+        border: 0; 
+      }
+      strong{
+        font-family: 'Arial';
+        font-size: 15px;
+        padding-left: 65%
+        color: white;
+        border: 0;
+      }
+
+      h1, strong, p  {
+
+  color:	#D5AD6D; /*if no support for background-clip*/
+	
+	background: -webkit-linear-gradient(transparent, transparent),
+             -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+	background: -o-linear-gradient(transparent, transparent);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* texto dourado */
+}
+    </style>
+</head>
+<body>
+<%- list.map(c =>{
+return `<p id="${c.cat}">Comando: <strong>${c.name}</strong>, Descrição: <spam class="marycommanddesc"><strong>${c.desc}</strong></spam></p>\n`
+// essa livraria é beeeeeeem vasta, olha
+
+})
+-%>
+</body>
+</html>
