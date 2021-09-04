@@ -8,9 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mary - Comandos</title>
     <style>
-      
+      <link rel="icon" href="https://mary.blacklight.net.br/src/img/icon.png">
       body {
-        background-image: url('https://cdn.discordapp.com/attachments/769212253781229598/869584071238488134/v2cmfx8rbdv11.jpg')
+        background-image: url('https://cdn.discordapp.com/attachments/769212253781229598/869584071238488134/v2cmfx8rbdv11.jpg');
+
+      }
+      mad {
+        
       }
 
       p{
@@ -43,12 +47,20 @@
 }
     </style>
 </head>
-<body>
-<%- list.map(c =>{
-return `<p id="${c.cat}">Comando: <strong>${c.name}</strong>, Descrição: <spam class="marycommanddesc"><strong>${c.desc}</strong></spam></p>\n`
+<body id="mad">
+    <div id="comandos">
+        <div id="main">
+            <center>
+            <h1>Comandos</h1>
+            </center>
+        </div>
+        <%- list.map(c =>{
+return `<div><p id="${c.categoria}">Comando: <strong>${c.name}</strong>, Descrição: <spam class="marycommanddesc"><strong>${c.desc}</strong></spam></p></div>\n`
 // essa livraria é beeeeeeem vasta, olha
 
 })
 -%>
+    </div>
+
 </body>
 </html>

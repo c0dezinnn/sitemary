@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/dashmain.css" rel="stylesheet"
+  <link rel="icon" href="https://mary.blacklight.net.br/src/img/icon.png">
+  <title>Mary - Dashboard</title>
+</head>
+<body>
+<% guilds.forEach((guild) => { 
+  %>
+  <div id="mydiv"></div>
+   <div id="<%=guild.id%>" class="guildView">
+  <% if(cliente.guilds.cache.get(guild.id)) {%>
+  <a class="btn btn-primary" href="/guilds/<%=guild.id%>/configure"><button>Configurar</button></a>
+<%} else {%>
+
+
+<a class="btn btn-primary" href="/api/invite?guild_id=<%=guild.id%>"><button>Me adicione</button></a>
+<%}%>
+  
+    <% if(guild.icon) {%>
+    
+      <img src="https://cdn.discordapp.com/icons/<%=guild.id%>/<%=guild.icon%>.png" class="img-fluid" width="100">
+  
+    <%} else { %>
+    
+      <img id="imgserver" src="https://cdn.discordapp.com/embed/avatars/3.png"  alt="Imagem" width="100">
+      <% } %>
+      <spam id="name"><%=guild.name%></spam>
+      </div>
+      </div>
+  
+<%})%>
+</body>
+</html>
